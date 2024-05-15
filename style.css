@@ -1,0 +1,196 @@
+/* Poppins & Open Sans Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Variables */
+:root {
+  --head-font: "Poppins", sans-serif;
+  --body-font: "Open Sans", sans-serif;
+  --text-color: hsl(0, 0%, 100%);
+  --bg-color: hsl(257, 40%, 49%);
+  --hover-color: hsl(300, 69%, 71%);
+}
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--body-font);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  background-image: url("img/bg-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Huddle Hero Section Styles */
+
+.container {
+  max-width: 144.4rem;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 8rem;
+}
+
+header {
+  margin-bottom: 8rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+
+.hero > * {
+  flex: 1;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+h1 {
+  font-family: var(--head-font);
+  font-weight: 600;
+  font-size: 5rem;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 150%;
+}
+
+.btn {
+  max-width: 30%;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  padding: 1.5rem 6rem;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+  font-family: var(--head-font);
+  font-weight: 400;
+  font-size: 1.8rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--hover-color);
+  color: var(--text-color);
+}
+
+footer {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+footer i {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: var(--text-color);
+  font-size: 1.9rem;
+  padding: 1.6rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 1px solid var(--text-color);
+}
+
+footer i:hover {
+  color: var(--hover-color);
+  border: 1px solid var(--hover-color);
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 5rem;
+  }
+  .hero {
+    flex-direction: column;
+    gap: 5rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+  }
+  .btn {
+    margin: 0 auto;
+    max-width: 60%;
+  }
+
+  footer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 543px) {
+  .container {
+    padding-inline: 3rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    max-width: 100%;
+    font-size: 1.4rem;
+    padding: 1.5rem 4rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding-inline: 1rem;
+  }
+}
+
+/* End of Media Queries */
